@@ -17,7 +17,7 @@
         </ul>
         <p class="mt-6">
             <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                <a href="/notes/create">Create Notes</a>
+                <a href="/note/create">Create Notes</a>
             </button>
         </p>
 
