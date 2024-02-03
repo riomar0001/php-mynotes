@@ -24,7 +24,6 @@
                         </svg>
                     </button>
 
-                    <!-- Profile dropdown -->
                     <div class="relative ml-3">
                         <div>
                             <button type="button" @click="isOpen = !isOpen" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -66,12 +65,11 @@
     </div>
 
 
-    <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
         <div x-show="isOpen" x-transition:enter="transition ease-out duration-100 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75 transform" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
             <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                 <a href="/" class="<?= isCurrent("/") ?>  hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
-                <a href="/notes" class="<?= isCurrent("/notes" || "/note" || "/notes/create") ?>   hover:text-white block rounded-md px-3 py-2 text-base font-medium">Notes</a>
+                <a href="/notes" class="<?= isCurrent("/notes") ?>   hover:text-white block rounded-md px-3 py-2 text-base font-medium">Notes</a>
                 <a href="/about" class="<?= isCurrent("/about") ?> hover:text-white block rounded-md px-3 py-2 text-base font-medium">About</a>
                 <a href="/contact" class="<?= isCurrent("/contact") ?> hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contacts</a>
             </div>
