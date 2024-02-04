@@ -7,7 +7,7 @@
         <p class="mb-6">
             <button type="submit" class="rounded-md w-40 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><a href="/notes">Go Back</a></button>
         </p>
-        <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+        <div class="flex border-2 rounded-lg border-gray-200 shadow-md border-opacity-50 p-8 sm:flex-row flex-col">
             <div class="flex-grow">
                 <p class="leading-relaxed text-base"><?= htmlspecialchars($note["body"]) ?></p>
             </div>

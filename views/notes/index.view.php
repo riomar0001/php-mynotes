@@ -15,7 +15,7 @@
             <div class="flex flex-wrap -m-4">
                 <?php foreach ($notes as $note) : ?>
                     <div class="p-4 lg:w-1/2 md:w-full">
-                        <div class="flex border-2 rounded-lg border-gray-300 border-opacity-50 p-8 sm:flex-row flex-col">
+                        <div class="flex border-2 rounded-lg border-gray-300 shadow-md border-opacity-50 p-8 sm:flex-row flex-col">
                             <div class="flex-grow">
                                 <p class="leading-relaxed text-base"><?= htmlspecialchars($note["body"]) ?></p>
                                 <a href="/note?id=<?= $note["id"] ?>" class="mt-3 text-indigo-500 inline-flex items-center">View Note
@@ -30,9 +30,6 @@
             </div>
 
         </div>
-
-
-
     </section>
 </main>
 
