@@ -14,10 +14,7 @@
                     <div>
                         <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                         <div class="mt-2">
-                            <input id="email" name="email" type="email" autocomplete="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                            <?php if (isset($errors["email"])) : ?>
-                                <p class="mt-2 text-s text-red-600"><?= $errors["email"] ?></p>
-                            <?php endif; ?>
+                            <input id="email" name="email" type="email" autocomplete="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" value="<?= old("email") ?> ">
                         </div>
                     </div>
 
@@ -26,15 +23,19 @@
                             <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
                         </div>
                         <div class="mt-2">
-                            <input id="password" name="password" type="password" autocomplete="current-password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                            <?php if (isset($errors["password"])) : ?>
-                                <p class="mt-2 text-s text-red-600"><?= $errors["password"] ?></p>
-                            <?php endif; ?>
+                            <input id="password" name="password" type="password" autocomplete="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
                     </div>
 
                     <div>
                         <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Login</button>
+                        <?php if (isset($errors["email"])) : ?>
+                            <p class="mt-2 text-sm text-red-600 justify-items-center"><?= $errors["email"] ?></p>
+                        <?php endif; ?>
+
+                        <?php if (isset($errors["password"])) : ?>
+                            <p class="mt-2 text-sm text-red-600 justify-items-center"><?= $errors["password"] ?></p>
+                        <?php endif; ?>
                     </div>
                 </form>
             </div>

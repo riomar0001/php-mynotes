@@ -28,7 +28,7 @@ function abort($code = 404)
 
 function authorize($condition, $status = Response::FORBIDDEN)
 {
-    if (! $condition) {
+    if (!$condition) {
         abort($status);
     }
 
@@ -47,7 +47,13 @@ function view($path, $attributes = [])
     require base_path('views/' . $path);
 }
 
-function redirect($path){
+function redirect($path)
+{
     header("location: {$path}");
     exit();
+}
+
+function old($key, $default = "")
+{
+    return $_SESSION["_flash"]["old"][$key] ?? $default;
 }
